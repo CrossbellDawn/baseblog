@@ -1,10 +1,16 @@
 <template>
-	<div id="app">
-		<router-view />
-	</div>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
-<style lang="scss">
+<script>
+  export default {
+    name: 'App',
+  }
+</script>
+
+<style>
 	html,body,#app{
 		height:100%;
 		padding:0;
