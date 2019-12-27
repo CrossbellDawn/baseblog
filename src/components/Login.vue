@@ -68,7 +68,7 @@
 						Cookies.set('token', this.ruleForm.username, 30);
 						this.$store.commit('settoken', this.ruleForm.username);
 						this.$router.push({
-							path: '/about'
+							path: '/main'
 						});
 						this.$message('登录成功');
 					} else {
@@ -89,9 +89,6 @@
 		height: 100% !important;
 		float: none !important;
 	}
-
-	html {}
-
 	.logo {
 		margin-top: 100px;
 		text-align: center;
