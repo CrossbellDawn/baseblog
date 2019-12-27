@@ -1,16 +1,13 @@
 <template>
   <div class="main">
     <el-row class="tac">
-      <el-col :span="12">
-        <h5>自定义颜色</h5>
+      <el-col :span="6">
         <el-menu
           default-active="2"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
-          background-color="#545c64"
+          background-color="#393D49"
           text-color="#fff"
-          active-text-color="#ffd04b">
+          active-text-color="#5FB878">
     
           <el-menu-item index="2">
             <i class="el-icon-menu"></i>
@@ -27,14 +24,5 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
-    }
-  }
+
 </script>
