@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Cookies from 'js-cookie'
+import Cookies from "vue-cookies"
 
 Vue.use(Vuex)
 
@@ -18,4 +18,4 @@ export default new Vuex.Store({
 			commit
 		}, token) => commit('settoken', token)
 	},
-});
+})

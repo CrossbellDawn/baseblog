@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: 'Login',
   data() {
@@ -82,9 +83,14 @@ export default {
       // 为表单绑定验证功能
       this.$refs[formName].validate(async valid => {
         if (valid) {
+           setTimeout(() => {
           window.sessionStorage.setItem('token', this.form.username)
+          Cookies.set('token',this.form.username,30);
+          this.$store.commit('settoken', this.form.username);
+          console.log(this.$store.state.token);
           this.$router.push('/main')
           this.$message.success('欢迎登录')
+          }, 2000);
         } else {
           this.$message.warning('警告：请输入正确的账号密码')
           return false

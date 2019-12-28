@@ -3,9 +3,9 @@
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo "
-      background-color="#393D49"
-      text-color="#fff"
-      active-text-color="#5FB878"
+      background-color="#252a34"
+      text-color="#EAEAEA"
+      active-text-color="#5ab1ef"
       router
     >
       <el-menu-item

@@ -86,36 +86,36 @@ export default {
       }
 
       .icon-people {
-        background: #40c9c6;
+        background: #08d9d6;
       }
 
       .icon-message {
-        background: #36a3f7;
+        background: #08d9d6;
       }
 
       .icon-money {
-        background: #f4516c;
+        background: #08d9d6;
       }
 
       .icon-shopping {
-        background: #34bfa3;
+        background: #08d9d6;
       }
     }
 
     .icon-people {
-      color: #40c9c6;
+      color: #08d9d6;
     }
 
     .icon-message {
-      color: #36a3f7;
+      color: #08d9d6;
     }
 
     .icon-money {
-      color: #f4516c;
+      color: #08d9d6;
     }
 
     .icon-shopping {
-      color: #34bfa3;
+      color: #08d9d6;
     }
 
     .card-panel-icon-wrapper {

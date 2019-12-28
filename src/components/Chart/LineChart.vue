@@ -64,7 +64,7 @@ export default {
     setOptions({ expectedData, actualData } = {}) {
       this.chart.setOption({
         xAxis: {
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['12/08', '12/09', '12/10', '12/11', '12/12', '12/13', '12/14','12/15','12/16','12/17','12/18','12/19','12/20','12/21'],
           boundaryGap: false,
           axisTick: {
             show: false
@@ -90,16 +90,16 @@ export default {
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: ['用户数量', '博客数量']
         },
         series: [
           {
-            name: 'expected',
+            name: '用户数量',
             itemStyle: {
               normal: {
-                color: '#FF005A',
+                color: '#39c7c9',
                 lineStyle: {
-                  color: '#FF005A',
+                  color: '#39c7c9',
                   width: 2
                 }
               }
@@ -111,18 +111,15 @@ export default {
             animationEasing: 'cubicInOut'
           },
           {
-            name: 'actual',
+            name: '博客数量',
             smooth: true,
             type: 'line',
             itemStyle: {
               normal: {
-                color: '#3888fa',
+                color: '#b6a2de',
                 lineStyle: {
-                  color: '#3888fa',
+                  color: '#b6a2de',
                   width: 2
-                },
-                areaStyle: {
-                  color: '#f3f8ff'
                 }
               }
             },

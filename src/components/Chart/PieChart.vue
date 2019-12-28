@@ -45,28 +45,37 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '博客类型占比',
+          x: 'center'
+        },
         tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c} ({d}%)'
         },
         legend: {
-          left: 'center',
-          bottom: '10',
-          data: ['Industries', 'Technology', 'Forex', 'Gold', 'Forecasts']
+          orient: 'vertical',
+          left: 'left',
+          top:'top',
+          data: ['Vue.js', 'Java', 'MySQL', '日记', '游记']
         },
         series: [
           {
             name: 'WEEKLY WRITE ARTICLES',
             type: 'pie',
-            roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
+            //roseType:'radius',
+            radius : '55%',
+            center: ['50%', '60%'],
+            label:{
+                show:true,
+                formatter:'{b}: {d}%'
+            },
             data: [
-              { value: 320, name: 'Industries' },
-              { value: 240, name: 'Technology' },
-              { value: 149, name: 'Forex' },
-              { value: 100, name: 'Gold' },
-              { value: 59, name: 'Forecasts' }
+              { value: 48, name: 'Vue.js' },
+              { value: 42, name: 'Java' },
+              { value: 36, name: 'MySQL' },
+              { value: 20, name: '日记' },
+              { value: 180, name: '游记' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600
