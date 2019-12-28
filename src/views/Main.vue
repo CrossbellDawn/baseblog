@@ -1,12 +1,25 @@
 <template>
-  <div>
-    首页
-    <el-button type="info" @click="logout">退出</el-button>
+  <div class="main-container">
+    <el-container class="main-container">
+      <el-aside width="200px">
+        <left-nav></left-nav>
+      </el-aside>
+      <el-main>
+        <right-app></right-app>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
+import LeftNav from '@/Layout/LeftNav'
+import RightApp from '@/Layout/RightApp'
+
 export default {
+  components: {
+    'left-nav': LeftNav,
+    'right-app': RightApp
+  },
   methods: {
     logout() {
       window.sessionStorage.clear()
@@ -16,4 +29,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.main-container {
+  height: 100%;
+}
+.el-main{
+  padding: 0;
+  margin: 0;
+}
+</style>

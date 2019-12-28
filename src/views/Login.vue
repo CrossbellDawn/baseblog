@@ -9,13 +9,23 @@
     >
       <h3 class="login-title">欢迎登录</h3>
       <el-form-item label="账号" prop="username">
-        <el-input type="text" placeholder="请输入账号" v-model="form.username" />
+        <el-input
+          type="text"
+          placeholder="请输入账号"
+          v-model="form.username"
+        />
       </el-form-item>
       <el-form-item label="密码" prop="password">
-        <el-input type="password" placeholder="请输入密码" v-model="form.password" />
+        <el-input
+          type="password"
+          placeholder="请输入密码"
+          v-model="form.password"
+        />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" v-on:click="onSubmit('loginFormRef')">登录</el-button>
+        <el-button type="primary" v-on:click="onSubmit('loginFormRef')"
+          >登录</el-button
+        >
         <el-button @click="resetLoginForm('loginFormRef')">重置</el-button>
       </el-form-item>
     </el-form>
@@ -24,12 +34,12 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   data() {
     return {
       form: {
-        username: "",
-        password: ""
+        username: '',
+        password: ''
       },
 
       // 表单验证，需要在 el-form-item 元素中增加 prop 属性
@@ -37,52 +47,52 @@ export default {
         username: [
           {
             required: true,
-            message: "请输入用户名称",
-            trigger: "blur"
+            message: '请输入用户名称',
+            trigger: 'blur'
           },
           {
             min: 4,
             max: 6,
-            message: "长度在4到6个字符",
-            trigger: "blur"
+            message: '长度在4到6个字符',
+            trigger: 'blur'
           }
         ],
         password: [
           {
             required: true,
-            message: "请输入登录密码",
-            trigger: "blur"
+            message: '请输入登录密码',
+            trigger: 'blur'
           },
           {
             min: 4,
             max: 6,
-            message: "长度在4到16个字符",
-            trigger: "blur"
+            message: '长度在4到16个字符',
+            trigger: 'blur'
           }
         ]
       }
-    };
+    }
   },
   methods: {
     // 点击重置按钮，重置表单信息
     resetLoginForm(formName) {
-      this.$refs[formName].resetFields();
+      this.$refs[formName].resetFields()
     },
     onSubmit(formName) {
       // 为表单绑定验证功能
       this.$refs[formName].validate(async valid => {
         if (valid) {
-          this.$router.push("/main");
-          this.$message.success("欢迎登录");
-          window.sessionStorage.setItem("token",this.form.username);
+          window.sessionStorage.setItem('token', this.form.username)
+          this.$router.push('/main')
+          this.$message.success('欢迎登录')
         } else {
-          this.$message.warning("警告：请输入正确的账号密码");
-          return false;
+          this.$message.warning('警告：请输入正确的账号密码')
+          return false
         }
-      });
+      })
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

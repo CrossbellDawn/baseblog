@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
 import Main from '../views/Main.vue'
+import Chart from '../components/Chart/Chart.vue'
+import Users from '../components/Users/Users.vue'
 
 Vue.use(VueRouter)
 
@@ -15,8 +17,17 @@ const routes = [{
 	component: Login
 }, {
 	path: '/main',
-	name: 'main',
 	component: Main,
+	redirect: '/chart',
+	children: [{
+			path: '/chart',
+			component: Chart
+		},
+		{
+			path: '/users',
+			component: Users
+		}
+	]
 }]
 
 const router = new VueRouter({
