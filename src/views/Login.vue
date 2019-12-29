@@ -20,6 +20,7 @@
           type="password"
           placeholder="请输入密码"
           v-model="form.password"
+          @keyup.enter.native="onSubmit('loginFormRef')"
         />
       </el-form-item>
       <el-form-item>
@@ -66,8 +67,8 @@ export default {
           },
           {
             min: 4,
-            max: 6,
-            message: '长度在4到16个字符',
+            max: 10,
+            message: '长度在4到10个字符',
             trigger: 'blur'
           }
         ]
@@ -90,7 +91,7 @@ export default {
           console.log(this.$store.state.token);
           this.$router.push('/main')
           this.$message.success('欢迎登录')
-          }, 2000);
+          }, 800);
         } else {
           this.$message.warning('警告：请输入正确的账号密码')
           return false
