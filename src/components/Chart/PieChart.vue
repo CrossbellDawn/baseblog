@@ -61,7 +61,7 @@ export default {
         },
         series: [
           {
-            name: 'WEEKLY WRITE ARTICLES',
+            name: '博客类型占比',
             type: 'pie',
             //roseType:'radius',
             radius : '55%',
