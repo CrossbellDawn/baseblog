@@ -3,7 +3,7 @@
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('newVisitis')">
         <div class="card-panel-icon-wrapper icon-people">
-          <svg-icon name="peoples" class="card-panel-icon" />
+          <svg-icon iconClass="peoples" class="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">用户数量</div>
@@ -14,7 +14,7 @@
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('messages')">
         <div class="card-panel-icon-wrapper icon-message">
-          <svg-icon name="readqut" class="card-panel-icon" />
+          <svg-icon iconClass="readqut" class="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">博客总数</div>
@@ -25,7 +25,7 @@
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('purchases')">
         <div class="card-panel-icon-wrapper icon-money">
-          <svg-icon name="newinfo" class="card-panel-icon" />
+          <svg-icon iconClass="newinfo" class="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">最新博客</div>
@@ -36,7 +36,7 @@
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('shoppings')">
         <div class="card-panel-icon-wrapper icon-shopping">
-          <svg-icon name="total" class="card-panel-icon" />
+          <svg-icon iconClass="total" class="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">阅读数量</div>

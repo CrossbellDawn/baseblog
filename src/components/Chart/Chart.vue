@@ -39,8 +39,8 @@ import BlogTable from '@/components/Chart/BlogTable.vue'
 
 const lineChartData = {
   newVisitis: {
-    expectedData: [30,140,30,140,30,140,30,140,30,140,30,140,30,140],
-    actualData: [140,60,140,60,140,60,140,60,140,60,140,60,140,60,]
+    expectedData: [30,50,30,80,40,100,60,40,100,80,160,120,75,80],
+    actualData: [40,70,50,70,30,80,50,65,100,60,120,140,80,60,]
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="leftnavbar">
     <el-menu
-      default-active="2"
+      :default-active="this.$route.path"
       class="el-menu-vertical-demo "
       background-color="#252a34"
       text-color="#EAEAEA"

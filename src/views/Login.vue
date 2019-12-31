@@ -88,7 +88,6 @@ export default {
           window.sessionStorage.setItem('token', this.form.username)
           Cookies.set('token',this.form.username,30);
           this.$store.commit('settoken', this.form.username);
-          console.log(this.$store.state.token);
           this.$router.push('/main')
           this.$message.success('欢迎登录')
           }, 800);
